@@ -26,9 +26,9 @@ public class TriangleRasterizer {
 
         Graphics g = zBuffer.getRaster().getGraphics();
         g.setColor(new Color(col.getRGB()));
-        g.drawLine((int) a.x, (int) a.y, (int) b.x, (int) b.y);
+        /*g.drawLine((int) a.x, (int) a.y, (int) b.x, (int) b.y);
         g.drawLine((int) b.x, (int) b.y, (int) c.x, (int) c.y);
-        g.drawLine((int) c.x, (int) c.y, (int) a.x, (int) a.y);
+        g.drawLine((int) c.x, (int) c.y, (int) a.x, (int) a.y);*/
 
         //Seřazení a, b, c podle y
         while(!(a.y <= b.y && b.y <= c.y))

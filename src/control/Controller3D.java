@@ -1,5 +1,7 @@
 package control;
 
+import Renderer.Renderer;
+import model.Arrow;
 import raster.ImageBuffer;
 import raster.Raster;
 import raster.TriangleRasterizer;
@@ -46,8 +48,11 @@ public class Controller3D implements Controller {
 /*        zBuffer.drawWithTest(10, 10, 0.5, new Col(0xff0000));
         zBuffer.drawWithTest(10, 10, 0.7, new Col(0xffff00));*/
 
-        triangleRasterizer.rasterize(new Point3D(-1,1,0.3),new Point3D(0.5,-1,0.3),new Point3D(1,1,0.3),new Col(0xFF0000));
-        triangleRasterizer.rasterize(new Point3D(-1,1,0.4),new Point3D(0.5,-1,0.2),new Point3D(1,1,0.4),new Col(0x0000FF));
+        /*triangleRasterizer.rasterize(new Point3D(-1,1,0.3),new Point3D(0.5,-1,0.3),new Point3D(1,1,0.3),new Col(0xFF0000));
+        triangleRasterizer.rasterize(new Point3D(-1,-1,0.4),new Point3D(0.3,-1,0.2),new Point3D(1,1,0.31),new Col(0x0000FF));*/
+        Arrow a = new Arrow();
+        Renderer r = new Renderer(triangleRasterizer);
+        r.render(a);
         panel.repaint();
     }
 }
